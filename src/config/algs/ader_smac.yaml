@@ -1,0 +1,42 @@
+# multinomial action selector
+action_selector: "multinomial"
+epsilon_start: 1.0
+epsilon_finish: .05
+epsilon_anneal_time: 50000
+mask_before_softmax: False
+
+runner: "episode"
+algname: "ader"
+# update the target network every {} training steps
+target_update_interval: 200
+
+lr: 0.0025
+c_lr: 0.0005
+
+agent_output_type: "pi_logits"
+td_lambda: 0.8
+learner: "ader_learner"
+runner_scope: 'episodic'
+
+
+name: "ader"
+buffer_size: 5000
+
+mixing_embed_dim: 32
+burn_in_period: 100
+
+hypernet_layers: 2
+hypernet_embed: 64
+
+use_td_lambda: True
+
+contribution_temperature: -1000  # set -1000 or positive value, e.g. 0.1
+
+adap_total_alpha_tau: 0.9  # xi
+adap_total_alpha_start: -3 #  initialize alpha --> -2 means alpha_init = e**-2
+
+tar_ent_ratio: 0.1
+optimizer: "RMS"    #  Adam RMS
+
+#combine_eps: False
+target_update_soft: False
