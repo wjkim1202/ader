@@ -26,6 +26,20 @@ To run the ADER algorithm on some SMAC map (say '1c3s5z') for 2mil timesteps:
 python src/main.py --config=ader_smac --env-config=sc2 with env_args.map_name=1c3s5z t_max=2000000
 ```
 
+
+## Cite the paper
+
+To cite our paper, use the following bib
+
 ```
-
-
+@InProceedings{pmlr-v202-kim23v,
+  title = 	 {An Adaptive Entropy-Regularization Framework for Multi-Agent Reinforcement Learning},
+  author =       {Kim, Woojun and Sung, Youngchul},
+  booktitle = 	 {Proceedings of the 40th International Conference on Machine Learning},
+  pages = 	 {16829--16852},
+  year = 	 {2023},
+  volume = 	 {202},
+  series = 	 {Proceedings of Machine Learning Research},
+  publisher =    {PMLR}
+}
+```
